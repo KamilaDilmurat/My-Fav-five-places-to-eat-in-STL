@@ -7,6 +7,6 @@ require(["esri/Map", "esri/views/MapView"], (Map, MapView) => {
           container: "viewDiv",
           map: map,
           zoom: 10, 
-          center: [-89, 34] // longitude, latitude
+          center: [-90, 38] // longitude, latitude
         });
       });
