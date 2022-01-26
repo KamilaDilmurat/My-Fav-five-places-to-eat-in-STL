@@ -1,17 +1,3 @@
-require(["esri/Map", "esri/views/MapView"], (Map, MapView) => {
-        const map = new Map({
-          basemap: "topo-vector"
-        });
-
-        const view = new MapView({
-          container: "viewDiv",
-          map: map,
-          zoom: 10, 
-          center: [-90, 38] // longitude, latitude
-        });
-      });
-
-
 
 var marker1 = L.marker([38.649, -90.261]).addTo(mymap);
 var marker2 = L.marker([38.640, -90.260]).addTo(mymap);
