@@ -1,19 +1,14 @@
 
+var STLfood = L.map('STLfood').setView([38.6270,-90.1994], 10);
 
-
-require(["esri/Map", "esri/views/MapView"], (Map, STLfood) => {
-        const map = new Map({
-          basemap: "topo-vector"
-        });
-
-        const view = new MapView({
-          container: "STLfood",
-          map: map,
-          zoom: 6, 
-          center: [38.640, -89.870] // longitude, latitude
-        });
-      });
-
+  // load a tile layer
+ L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}{r}.{ext}', {
+	attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+	subdomains: 'abcd',
+	minZoom: 0,
+	maxZoom: 20,
+	ext: 'png'
+}).addTo(STLfood);
 
 
 var marker1 = L.marker([38.649, -90.261]).addTo(STLfood);
